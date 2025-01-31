@@ -6,7 +6,6 @@ const activeClassName = ({ isActive }: {isActive: boolean}) =>
   .join(' ');
 
 export default function Menu() {
-  console.log(activeClassName)
   return (
     <nav className="menu">
       <NavLink className={activeClassName} to="/react-router" end>Главная</NavLink>
