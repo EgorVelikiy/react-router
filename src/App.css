@@ -5,7 +5,7 @@
 }
 
 #root {
-  width: 100%;
+  min-width: 900px;
   height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -88,8 +88,8 @@ body {
   border-bottom-color: hsl(60, 50%, 50%);
 }
 
-.active,
-.active:hover {
+.menu__item-active,
+.menu__item-active:hover {
   opacity: 1;
   border-bottom-color: hsl(120, 50%, 50%);
 }

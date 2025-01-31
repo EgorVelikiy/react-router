@@ -1,12 +1,18 @@
 import { NavLink } from "react-router-dom";
 
+const activeClassName = ({ isActive }: {isActive: boolean}) => 
+  ['menu__item', isActive ? 'menu__item-active' : null]
+  .filter(Boolean)
+  .join(' ');
+
 export default function Menu() {
-    return (
-      <nav className="menu">
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'menu__item active' : 'menu__item')}>Главная</NavLink>
-        <NavLink to="/drift" className={({ isActive }) => (isActive ? 'menu__item active' : 'menu__item')}>Дрифт-такси</NavLink>
-        <NavLink to="/timeattack" className={({ isActive }) => (isActive ? 'menu__item active' : 'menu__item')}>Time Attack</NavLink>
-        <NavLink to="/forza" className={({ isActive }) => (isActive ? 'menu__item active' : 'menu__item')}>Forza Karting</NavLink>
-      </nav>
-    );
-  }
+  console.log(activeClassName)
+  return (
+    <nav className="menu">
+      <NavLink className={activeClassName} to="/react-router" end>Главная</NavLink>
+      <NavLink className={activeClassName} to="/drift" end>Дрифт-такси</NavLink>
+      <NavLink className={activeClassName} to="/timeattack" end>Time Attack</NavLink>
+      <NavLink className={activeClassName} to="/forza">Forza Karting</NavLink>
+    </nav>
+  );
+}

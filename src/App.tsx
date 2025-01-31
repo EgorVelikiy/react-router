@@ -13,7 +13,7 @@ export default function App() {
         <Menu />
         <div className="page">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/react-router" element={<HomePage />} />
             <Route path="/drift" element={<DriftPage />} />
             <Route path="/timeattack" element={<TimeAttackPage />} />
             <Route path="/forza" element={<ForzaPage />} />
